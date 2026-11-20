@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_deep_navy">#070B14</color>
+    <color name="bg_card_dark">#101828</color>
+    <color name="bg_card_elevated">#162238</color>
+    <color name="accent_cyan">#00F0FF</color>
+    <color name="accent_gold">#FFD166</color>
+    <color name="accent_emerald">#10B981</color>
+    <color name="accent_crimson">#EF4444</color>
+    <color name="accent_royal_blue">#3B82F6</color>
+    <color name="text_primary">#F8FAFC</color>
+    <color name="text_secondary">#94A3B8</color>
+</resources>

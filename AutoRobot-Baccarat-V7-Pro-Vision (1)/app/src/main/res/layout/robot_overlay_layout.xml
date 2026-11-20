@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/robotRootContainer"
+    android:layout_width="290dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_mini_panel"
+    android:orientation="vertical"
+    android:padding="11dp">
+
+    <LinearLayout
+        android:id="@+id/robotHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/flOverlayRobotBox"
+            android:layout_width="54dp"
+            android:layout_height="54dp">
+
+            <View
+                android:id="@+id/viewOverlayRippleRing"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:layout_gravity="center"
+                android:alpha="0"
+                android:background="@drawable/bg_robot_aura_gold" />
+
+            <View
+                android:id="@+id/viewOverlayRobotAura"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/bg_robot_aura" />
+
+            <ImageView
+                android:id="@+id/ivOverlayRobot"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:contentDescription="Robot AI"
+                android:src="@drawable/ic_robot_cutout" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ROBOT AI V7 VISION+"
+                    android:textColor="@color/accent_cyan"
+                    android:textSize="11.5sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvOverlayCoinBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="999 Xu"
+                    android:textColor="@color/accent_gold"
+                    android:textSize="11sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTimingBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="CHỜ KHÓA BẢNG CẦU..."
+                android:textColor="@color/accent_emerald"
+                android:textSize="10.5sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnToggleMinimize"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@android:color/transparent"
+            android:padding="0dp"
+            android:text="—"
+            android:textColor="#00F0FF"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnCloseOverlay"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:background="@android:color/transparent"
+            android:padding="0dp"
+            android:text="✕"
+            android:textColor="#EF4444"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutExpandableBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/flResultBannerContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp">
+
+            <TextView
+                android:id="@+id/tvResultAnnouncement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_result_banner"
+                android:gravity="center"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="5dp"
+                android:text="KẾT QUẢ: ĐANG ĐỒNG BỘ BẢNG CẦU..."
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/viewBannerShimmer"
+                android:layout_width="38dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical|start"
+                android:alpha="0"
+                android:background="#55FFFFFF" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutRobotBubble"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:background="@drawable/bg_robot_bubble"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvRobotStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đặt khung vàng khớp bảng cầu (Cầu Chính hoặc Bảng Hạt) rồi bấm BẮT ĐẦU!"
+                android:textColor="@color/accent_gold"
+                android:textSize="11.5sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvMainRoadStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Thế cầu: Chưa đủ dữ liệu"
+                android:textColor="@color/text_primary"
+                android:textSize="10.5sp" />
+
+            <TextView
+                android:id="@+id/tvMarkovProb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Tỷ lệ: BANKER 50% | PLAYER 50%"
+                android:textColor="@color/accent_cyan"
+                android:textSize="10.5sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="3dp"
+                android:background="#1E293B"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/viewProbBarBanker"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:background="#EF4444" />
+
+                <View
+                    android:id="@+id/viewProbBarPlayer"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="50"
+                    android:background="#3B82F6" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvRecentBeads"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Chuỗi bắt được: --"
+                android:textColor="@color/text_secondary"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnToggleScan"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1.2"
+                android:background="@drawable/bg_btn_emerald"
+                android:text="BẮT ĐẦU"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnToggleTarget"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_outline_cyan"
+                android:text="KHÓA KHUNG"
+                android:textColor="@color/accent_cyan"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="6dp"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/btnResetRoad"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_weight="0.8"
+                android:background="@drawable/bg_btn_gold"
+                android:text="LÀM MỚI"
+                android:textColor="#090D16"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
